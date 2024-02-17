@@ -4,6 +4,8 @@ const app = express();
 const Joi = require('joi');
 app.use(express.json());
 
+
+//List of Recipes
 const rconst recipe = [ 
   {
   
@@ -49,7 +51,7 @@ const rconst recipe = [
   },
   {
     
-    name: 'Kare-Kare Ingredients',
+    name: 'Kare-Kare',
     Ingredients: '1 -1.5 kilogram oxtail, cut-ups, 2 pcs onions, quartered, water, enough to cover the meat, 4 tbsp canola oil, 2 tbsp annatto seeds /achuete seeds, 1 pc onion, chopped, 10 cloves garlic, chopped, 1/2 cup creamy or unsweetened peanut butter, 2 pcs Knorr Beef Cubes, 3 pcs eggplants, sliced, 1 bundle sitaw, cut into 2" pieces, 1 pack pechay Tagalog, sliced or Bok-Choy, Other vegetables to include: Pumpkin flowers, spinach',
     Instructions:'First, you need to tenderize the oxtail to be able to enjoy this majestic dish. Get a pot and throw the oxtail and quartered onions in. Pour the water, boil over high heat, and then reduce to a simmer until the oxtail is tender. Make sure that the meat is submerged to allow even cooking. Once tender, strain the oxtail from the broth and set aside the meat and broth., Now, get a pan and combine the oil and annatto seeds. Cook over low heat for 3 minutes or until the color of the oil turns orange. Strain out the seeds, then pour the infused oil back into the pan. Throw in the onions and garlic and sauté until lightly toasted. Add the softened oxtail next and continue to sauté., Just a few more steps, and this dish is done. Add your favorite peanut butter brand, 1-1/2 cups of broth (where oxtail was softened), and Knorr Beef Cubes. Mix well until peanut butter is dissolved. Simmer for 15-20 minutes until the sauce has slightly thickened., Add the vegetables last and cook until done. Thats it! Classic Kare-Kare is best enjoyed with a serving of warm bagoong. We kid you not, and you will definitely eat more than usual. So, prepare a large pot of rice nearby for those extra servings., Besides opting for oxtail as your primary protein source for the dish, other alternatives like seafood as well as Lechon Kawali also speed up the prep work. You can even pre-make the sauce and store it in your freezer until ready for use. This little hack ensures you save even more time while allowing you to serve homecooked meals to loved ones as quickly as it would take if you had ordered out., Since this dish contains peanuts, it is best to serve and consume it immediately to avoid spoilage. Another way to steer clear of this problem is to plate the Kare-Kare with the cooked vegetables on the side instead of mixing it into the sauce. Hopefully, Knorr’s easy Kare-Kare recipe encourages you to try it out and if you are looking for a unique way to serve this at your next gathering, consider pairing it with some Bagoong Rice.',
   },
