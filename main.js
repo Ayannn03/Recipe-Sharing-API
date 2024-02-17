@@ -83,7 +83,7 @@ app.put('/api/recipes/:name', (req, res) => {
     name: Joi.string().required(),
     ingredients: Joi.string().required(),
     instructions: Joi.string().required(),
-    // Add other properties to validate as needed
+   
   });
 
   const result = schema.validate(req.body);
