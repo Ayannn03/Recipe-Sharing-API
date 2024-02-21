@@ -1,64 +1,54 @@
 # Recipe-Sharing-API
 
-### Install Node.js and Required Packages:
+1. **GET All Recipes:**
+   - Endpoint: `/api/recipes`
+   - Method: GET
+   - Description: Get a list of all recipes.
+   - Example: `https://localhost:3000/api/recipes`
 
-#### 1. Install Node.js and npm:
-   - Download and install Node.js from [the official website](https://nodejs.org/).
-   - npm (Node Package Manager) is included with Node.js.
+2. **GET Specific Recipe by Name:**
+   - Endpoint: `/api/recipes/:name`
+   - Method: GET
+   - Description: Get details of a specific recipe by providing its name as a parameter.
+   - Example: `https://localhost:3000/api/recipes/Pork Adobo`
 
-#### 2. Create a New Node.js Project:
-   - Open a terminal or command prompt.
-   - Navigate to the directory where you want to create your project.
-
-#### 3. Initialize a New Node.js Project:
-   - Run the following command to initialize a new Node.js project:
+3. **POST (Create) a New Recipe:**
+   - Endpoint: `/api/recipes`
+   - Method: POST
+   - Description: Create a new recipe by sending a JSON payload with the recipe details.
+   - Example:
      ```bash
-     npm init -y
+     curl -X POST -H "Content-Type: application/json" -d '{"name": "New Recipe", "ingredients": ["Ingredient1", "Ingredient2"], "instructions": ["Step 1", "Step 2"], "tag": "Dinner"}' https://localhost:3000/api/recipes
      ```
-     This will create a `package.json` file with default values.
 
-#### 4. Install Required Packages:
-   - Install the necessary packages using the following command:
+4. **PUT (Update) a Recipe:**
+   - Endpoint: `/api/recipes/:name`
+   - Method: PUT
+   - Description: Update an existing recipe by providing its name as a parameter and sending a JSON payload with the updated details.
+   - Example:
      ```bash
-     npm install express body-parser joi
+     curl -X PUT -H "Content-Type: application/json" -d '{"name": "Pork Adobo", "ingredients": ["Updated Ingredient1", "Updated Ingredient2"], "instructions": ["Updated Step 1", "Updated Step 2"], "tag": "Updated Tag"}' https://localhost:3000/api/recipes/Pork Adobo
      ```
-     - `express`: Web application framework for Node.js.
-     - `body-parser`: Middleware to parse incoming request bodies.
-     - `joi`: Object schema description language and validator.
 
-### Set Up and Run Your Express.js Server:
+5. **DELETE a Recipe:**
+   - Endpoint: `/api/recipes/:name`
+   - Method: DELETE
+   - Description: Delete a recipe by providing its name as a parameter.
+   - Example: `curl -X DELETE https://localhost:3000/api/recipes/Pork Adobo`
 
-#### 5. Create Your Express.js File:
-   - Create a new file (e.g., `app.js` or any filename of your choice) and paste the provided Express.js code into it.
+Make sure to replace `https://localhost:3000` with the actual URL or IP where your server is running. You can use tools like `curl` or Postman for testing these API endpoints. Additionally, the application uses Express.js and Joi for validation. Ensure you have the required dependencies installed:
 
-#### 6. Run Your Express.js Server:
-   - In the terminal, run the following command to start your Express.js server:
-     ```bash
-     node app.js
-     ```
-   - The server will start and listen for requests on `https://localhost:3000` by default.
+```bash
+npm install express express-validator joi
+```
 
-### Test Endpoints with Postman:
+You can then run your application using:
 
-#### 7. Use Postman for CRUD Operations:
-   - Open Postman and perform the following CRUD operations:
-     - **GET All Recipes:** Send a GET request to `https://localhost:3000/api/recipes`.
-     - **GET Single Recipe:** Send a GET request to `https://localhost:3000/api/recipes/{recipeName}` (replace `{recipeName}` with an actual recipe name).
-     - **POST New Recipe:** Send a POST request to `https://localhost:3000/api/recipes`
-     - {
-           "name": "New Recipe",
-           "ingredients": ["Ingredient 1", "Ingredient 2"],
-           "instructions": ["Step 1", "Step 2"],
-           "Tag": "Dinner"
-       } with the recipe details in the request body.
-     - **PUT Update Recipe:** Send a PUT request to `https://localhost:3000/api/recipes/{recipeName}` with the updated recipe details in the request body.
-     - **DELETE Recipe:** Send a DELETE request to `https://localhost:3000/api/recipes/{recipeName}` to delete a recipe.
+```bash
+node your-app-file.js
+```
 
-### Note:
-   - Ensure that the necessary Node.js packages are installed by checking the `node_modules` directory in your project.
-   - If you encounter any issues related to SSL certificates in Postman, you can temporarily disable SSL certificate verification in Postman settings.
-
-With these steps, you should have a Node.js project set up with the required dependencies, and your Express.js server running. Adjust filenames and paths as needed based on your project structure.
+Remember to customize this example according to your specific needs, and feel free to ask if you have any questions or need further clarification.
 
 members: Ian Reniel R. Rey
          Ramon Jacob Laugo
